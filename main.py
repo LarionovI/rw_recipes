@@ -29,7 +29,6 @@ def get_shop_list_by_dishes(dishes, person_count):
     for dish in dishes:
         ingredients = cook_book[dish]
         for ingredient in ingredients:
-
             if ingredient["ingredient_name"] in result:
                 result[ingredient["ingredient_name"]]["quantity"] += ingredient["quantity"] * person_count
             else:
@@ -39,5 +38,6 @@ def get_shop_list_by_dishes(dishes, person_count):
                 }
 
     return result
+
 
 print(get_shop_list_by_dishes(["Омлет", "Фахитос"], 2))
